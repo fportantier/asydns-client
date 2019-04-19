@@ -17,6 +17,5 @@ or build with go get:
 
 
 
-
 The development of this software is supported by Securetia SRL (https://www.securetia.com/)
 
