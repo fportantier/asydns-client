@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"../util"
+	"asydns-client/util"
 )
 
 func SavePrivatePEM(fileName string, key *rsa.PrivateKey) {

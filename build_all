@@ -1,0 +1,21 @@
+#!/bin/sh
+
+TARGETS="windows:386 windows:amd64 darwin:386 darwin:amd64 freebsd:386 freebsd:amd64 linux:386 linux:amd64 netbsd:386 netbsd:amd64 openbsd:386 openbsd:amd64"
+
+for TARGET in $TARGETS
+do
+    echo $TARGET
+
+    TARGET_OS=$(echo $TARGET | cut -d : -f 1)
+    TARGET_ARCH=$(echo $TARGET | cut -d : -f 2)
+
+    if [ "$TARGET_OS" = "windows" ]
+    then
+        OUTFILE="_build/asydns-client-${TARGET_OS}-${TARGET_ARCH}.exe"
+    else
+        OUTFILE="_build/asydns-client-${TARGET_OS}-${TARGET_ARCH}"
+    fi
+
+    env GOOS=$TARGET_OS GOARCH=$TARGET_ARCH go build -o $OUTFILE
+
+done

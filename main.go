@@ -8,9 +8,9 @@ import (
 	"os"
 	"os/user"
 
-	"./asydns"
-	"./util"
-	"./xcrypto"
+	"asydns-client/asydns"
+	"asydns-client/util"
+	"asydns-client/xcrypto"
 )
 
 func main() {
