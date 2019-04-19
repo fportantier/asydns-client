@@ -9,6 +9,7 @@ Quick Start
 To claim your AsyDNS record, simply download the pre-compiled binaries from https://github.com/portantier/asydns-client/releases
 or build with go get:
 
+::
 
    go get github.com/portantier/asydns-client 
    asydns-client
