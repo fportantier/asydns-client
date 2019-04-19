@@ -264,7 +264,14 @@ func asydnsUpdate(url, public_pem, challenge, signed_challenge string, revoke bo
     fmt.Print("JSON a enviar:")
     fmt.Println(string(message_json))
 
-    req, err := http.NewRequest("POST", url + "/api", bytes.NewBuffer(message_json))
+    method := "POST"
+
+    if revoke == true {
+        method = "DELETE"
+    }
+
+    req, err := http.NewRequest(method, url + "/api", bytes.NewBuffer(message_json))
+
     //req.Header.Set("X-Custom-Header", "myvalue")
     req.Header.Set("Content-Type", "application/json")
 
