@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"asydns-client/util"
+	"github.com/portantier/asydns-client/util"
 )
 
 func SavePrivatePEM(fileName string, key *rsa.PrivateKey) {
