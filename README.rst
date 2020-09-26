@@ -1,12 +1,12 @@
 AsyDNS Multiplatform Client (in Golang)
 =======================================
 
-Client for the AsyDNS Protocol (https://github.com/portantier/asydns)
+Client for the AsyDNS Protocol (https://github.com/fportantier/asydns)
 
 Quick Start
 -----------
 
-To claim your AsyDNS record, simply download the pre-compiled binaries from https://github.com/portantier/asydns-client/releases
+To claim your AsyDNS record, simply download the pre-compiled binaries from https://github.com/fportantier/asydns-client/releases
 or build with go get:
 
 ::
